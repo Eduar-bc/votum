@@ -22,6 +22,9 @@ public class User {
     @Column(nullable=false)
     private String password;
 
+    @Column(nullable=false)
+    private boolean enabled = true;
+
     @ElementCollection(fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
     @CollectionTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"))
