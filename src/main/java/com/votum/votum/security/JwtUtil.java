@@ -33,7 +33,7 @@ public class JwtUtil {
                 .setSubject(email)
                 .setIssuedAt(now)
                 .setExpiration(exp)
-                .signWith(key, SignatureAlgorithm.ES256)
+                .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }
 
