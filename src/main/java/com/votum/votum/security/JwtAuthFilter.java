@@ -1,6 +1,5 @@
 package com.votum.votum.security;
 
-import com.votum.votum.service.CustomUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
