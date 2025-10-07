@@ -43,6 +43,7 @@ target/
 !**/src/test/**/target/
 !**/src/main/**/build/
 !**/src/test/**/build/
+src/main/java/com/votum/votum/controller/TestController.java
 
 # Gradle (si lo usas)
 .gradle/

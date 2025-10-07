@@ -6,15 +6,15 @@ import io.jsonwebtoken.Jwts;
 
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Component;
 
 import java.security.Key;
+import java.util.Collection;
 import java.util.Date;
 import java.util.function.Function;
-
+// genera token
 @Component
 public class JwtUtil {
     private final Key key;
@@ -25,12 +25,15 @@ public class JwtUtil {
         this.expirationMs = expirationMs;
     }
 
-    public String generateToken(String email) {
+    public String generateToken(String email, Collection<? extends GrantedAuthority> roles) {
         Date now = new Date();
         Date exp = new Date(now.getTime() + expirationMs);
 
         return Jwts.builder()
                 .setSubject(email)
+                .claim("roles", roles.stream()
+                        .map(GrantedAuthority::getAuthority)
+                        .toList())
                 .setIssuedAt(now)
                 .setExpiration(exp)
                 .signWith(key, SignatureAlgorithm.HS256)
