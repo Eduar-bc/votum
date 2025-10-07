@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -54,8 +55,10 @@ private final AuthenticationManager authManager;
                     new UsernamePasswordAuthenticationToken(req.getEmail(), req.getPassword())
             );
 
+            UserDetails userDetails = (UserDetails) auth.getPrincipal();
+
             // Si llega aquí, la autenticación fue exitosa
-            String token = jwtUtil.generateToken(req.getEmail());
+            String token = jwtUtil.generateToken(req.getEmail(), userDetails.getAuthorities());
             return ResponseEntity.ok(new LoginResponse(token));
 
         } catch (org.springframework.security.authentication.BadCredentialsException e) {
