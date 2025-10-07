@@ -1,13 +1,74 @@
-# Documentación temporal
-HELP.md
 
+# ============ FRONTEND (Vue.js/Node.js) ============
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production build
+dist/
+dist-ssr/
+build/
+
+# Testing
+coverage/
+/cypress/videos/
+/cypress/screenshots/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+*.local
+
+# Vite cache
+.vite/
+*.tsbuildinfo
+
+
+# ============ BACKEND (Spring Boot/Maven) ============
 # Maven
 target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
-# Spring Tool Suite
+# Gradle (si lo usas)
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Spring Boot
+HELP.md
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+
+# ============ IDEs y EDITORES ============
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
 .apt_generated
 .classpath
 .factorypath
@@ -15,46 +76,88 @@ target/
 .settings
 .springBeans
 .sts4-cache
-
-# IntelliJ IDEA
-.idea
-*.iws
-*.iml
-*.ipr
+bin/
 
 # NetBeans
 /nbproject/private/
 /nbbuild/
-/dist/
 /nbdist/
 /.nb-gradle/
 
-# Build
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
 # VS Code
-.vscode/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
 
-# Node.js
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Environment variables
-.env
-.env.local
-.env.*.local
-
-# Sistema operativo
-.DS_Store
-
-# Otros editores
+# Visual Studio
 *.suo
-*.ntvs*
-*.njsproj
-*.sln
+*.user
+*.userosscache
+*.sln.docstates
+
+
+# ============ SISTEMA OPERATIVO ============
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+
+# ============ OTROS ============
+# Archivos temporales
+*.swp
+*.swo
 *.sw?
+*.bak
+*.tmp
+*.temp
+*~
+
+# Archivos de configuración local
+*.local.conf
+config.local.*
+
+# Bases de datos locales
+*.db
+*.sqlite
+*.sqlite3
+
+# Certificados y claves
+*.pem
+*.key
+*.cert
+*.crt
+*.p12
+*.jks
+
+# Archivos grandes o binarios
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# JVM crash logs
+hs_err_pid*
+replay_pid*
