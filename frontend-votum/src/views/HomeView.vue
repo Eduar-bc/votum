@@ -36,6 +36,28 @@
           </div>
         </div>
 
+        <!-- Sección de Creador -->
+        <div class="creator-section">
+          <div v-if="!isCreator()" class="creator-card">
+            <div class="creator-icon">🎯</div>
+            <h3>¿Quieres crear elecciones?</h3>
+            <p>Conviértete en creador y gestiona tus propias votaciones</p>
+            <button
+              @click="handleBecomeCreator"
+              :disabled="loading"
+              class="btn-creator"
+            >
+              {{ loading ? "Procesando..." : "Convertirme en creador" }}
+            </button>
+          </div>
+          <div v-else class="creator-active">
+            <p class="creator-status">✅ Ya eres creador de elecciones</p>
+            <button @click="goToCreatorPanel" class="btn-panel">
+              Ir al panel de creador
+            </button>
+          </div>
+        </div>
+
         <p class="coming-soon">
           Próximamente: Módulos de votación, resultados en tiempo real y más...
         </p>
@@ -46,24 +68,49 @@
 
 <script>
 import { useRouter } from 'vue-router';
+import { ref } from 'vue';
+import { isCreator } from '@/utils/auth';
+import { becomeCreator } from '@/services/userService';
 
 export default {
   name: 'HomeView',
   setup() {
     const router = useRouter();
+    const loading = ref(false);
+    const message = ref('');
 
     const handleLogout = () => {
-      // Eliminar el token del localStorage
-      localStorage.removeItem('token');
-
+      // Limpiar TODOS los datos de localStorage
+      localStorage.clear();
       console.log('🔓 Sesión cerrada');
-
       // Redirigir al login
       router.push('/login');
     };
 
+    const handleBecomeCreator = async () => {
+      loading.value = true;
+      try {
+        message.value = await becomeCreator();
+        alert(message.value);
+        router.push('/panel-creador');
+      } catch (err) {
+        console.error('Error al convertirse en creador:', err);
+        alert(err.message || 'Error al procesar la solicitud');
+      } finally {
+        loading.value = false;
+      }
+    };
+
+    const goToCreatorPanel = () => {
+      router.push('/panel-creador');
+    };
+
     return {
       handleLogout,
+      handleBecomeCreator,
+      goToCreatorPanel,
+      isCreator,
+      loading,
     };
   },
 };
@@ -185,6 +232,89 @@ export default {
   background-clip: text;
 }
 
+/* Estilos para la sección de creador */
+.creator-section {
+  margin-bottom: 3rem;
+}
+
+.creator-card {
+  background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.creator-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.creator-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.creator-card p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.btn-creator {
+  padding: 0.75rem 2rem;
+  background: white;
+  color: #38a169;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-creator:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-creator:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.creator-active {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  border: 2px solid #48bb78;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.creator-status {
+  color: #38a169;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.btn-panel {
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-panel:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
 .coming-soon {
   text-align: center;
   color: #a0aec0;
@@ -205,6 +335,10 @@ export default {
 
   .info-grid {
     grid-template-columns: 1fr;
+  }
+
+  .creator-card, .creator-active {
+    padding: 1.5rem;
   }
 }
 </style>
