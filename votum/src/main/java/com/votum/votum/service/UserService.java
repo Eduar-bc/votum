@@ -17,7 +17,7 @@ public class UserService {
         if (!roles.contains(Role.ROLE_ELECTION_ADMIN)){
             roles.add(Role.ROLE_ELECTION_ADMIN);
             u.setRoles(roles);
-            userRepository.save(u);
+            return userRepository.save(u);
         }
         return u;
     }
