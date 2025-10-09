@@ -21,7 +21,7 @@ public class EleccionService {
     }
 
     public List<Eleccion> listarPorCreador(Long id){
-        return eleccionRepository.findByCreadorId(id);
+        return eleccionRepository.findByCreador_Id(id);
     }
 
 

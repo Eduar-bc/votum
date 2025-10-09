@@ -34,6 +34,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**").permitAll()
                                 .requestMatchers("/api/users/become-creator").authenticated()
+                                .requestMatchers("/api/elections").hasRole("ELECTION_ADMIN")
                         .anyRequest().authenticated()
 //                        .anyRequest().denyAll()
                 )
