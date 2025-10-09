@@ -1,10 +1,7 @@
 package com.votum.votum.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -13,6 +10,7 @@ import java.time.LocalDateTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 @Table(name = "elecciones")
 public class Eleccion {
 
@@ -21,9 +19,9 @@ public class Eleccion {
     private Long id;
 
     @Column(nullable = false, length = 100)
-    private String nombreEleccion;
+    private String titulo;
 
-    private String descripcionEleccion;
+    private String descripcion;
 
     private LocalDateTime fechaInicio;
     private LocalDateTime fechaFin;

@@ -25,7 +25,7 @@ const routes = [
     meta: { guest: true }
   },
   {
-    path: '/panel-creador',
+    path: '/creator-panel',
     name: 'creator-panel',
     component: CreatorPanel,
     meta: { requiresAuth: true, requiresCreator: true }
