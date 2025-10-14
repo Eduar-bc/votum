@@ -35,6 +35,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll()
                                 .requestMatchers("/api/users/become-creator").authenticated()
                                 .requestMatchers("/api/elections").hasRole("ELECTION_ADMIN")
+                                .requestMatchers("/api/elecciones/{id}/votantes").hasRole("ELECTION_ADMIN")
                         .anyRequest().authenticated()
 //                        .anyRequest().denyAll()
                 )
