@@ -426,6 +426,3 @@ Modo: create-drop (tablas temporales)
 mvn clean test
 # o desde IntelliJ: Run 'All Tests'
 ```
-
-*Documento generado automáticamente por el Sistema de Pruebas Votum v1.0*  
-*Informe ID: VOTUM-TEST-2025-11-16-001*
