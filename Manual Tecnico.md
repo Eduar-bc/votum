@@ -116,14 +116,8 @@ Security Filter (JWT)
 - FINALIZADA
 
 ### 3.3 Diagrama Entidad-Relación
-```
-User (1) ----< (N) Eleccion
-  |
-  |
-  | (N)
-  |
-EleccionVotante (N)---- (1) Eleccion
-```
+
+<img width="852" height="555" alt="Diagrama Entidad - Relación" src="https://github.com/user-attachments/assets/08940161-191d-4708-a230-63d76ffccd9e" />
 
 ---
 
@@ -266,7 +260,7 @@ Agrega votantes a una elección.
 
 ### 6.2 Clonar el Repositorio
 ```bash
-git clone <url-repositorio>
+git clone https://github.com/Eduar-bc/votum/
 cd votum
 ```
 
