@@ -43,7 +43,7 @@ El sistema cuenta con tres tipos de usuarios:
 
 ### 2.1 Acceso al Sistema
 1. Abra su navegador web
-2. Ingrese a la dirección: `[URL del sistema]`
+2. Ingrese a la dirección: `[null]`
 3. Verá la pantalla de inicio de Votum
 
 ### 2.2 Pantalla de Inicio
@@ -58,25 +58,11 @@ La pantalla principal muestra:
 
 ### 3.1 Crear una Cuenta Nueva
 
-**Paso 1:** Haga clic en **"Registrarse"**
+**Paso 1:** Haga clic en **"Crear Cuenta"**
 
 **Paso 2:** Complete el formulario de registro:
-```
-┌─────────────────────────────────────┐
-│  REGISTRO DE USUARIO                │
-├─────────────────────────────────────┤
-│  Correo electrónico:                │
-│  [___________________________]      │
-│                                     │
-│  Contraseña:                        │
-│  [___________________________]      │
-│                                     │
-│  Confirmar contraseña:              │
-│  [___________________________]      │
-│                                     │
-│        [  Registrarse  ]            │
-└─────────────────────────────────────┘
-```
+
+<img width="1211" height="711" alt="registro" src="https://github.com/user-attachments/assets/2eea9392-6eb7-4381-9612-a79383dbc99e" />
 
 **Paso 3:** Haga clic en **"Registrarse"**
 
@@ -90,25 +76,10 @@ La pantalla principal muestra:
 **Paso 1:** En la pantalla principal, haga clic en **"Iniciar Sesión"**
 
 **Paso 2:** Ingrese sus credenciales:
-```
-┌─────────────────────────────────────┐
-│  INICIAR SESIÓN                     │
-├─────────────────────────────────────┤
-│  Correo electrónico:                │
-│  [___________________________]      │
-│                                     │
-│  Contraseña:                        │
-│  [___________________________]      │
-│                                     │
-│  [ ] Recordarme                     │
-│                                     │
-│        [  Entrar  ]                 │
-│                                     │
-│  ¿Olvidó su contraseña?             │
-└─────────────────────────────────────┘
-```
 
-**Paso 3:** Haga clic en **"Entrar"**
+<img width="1215" height="714" alt="Iniciar Sesión" src="https://github.com/user-attachments/assets/4437f3e6-9144-4161-852a-28f88dedea38" />
+
+**Paso 3:** Haga clic en **"Iniciar Sesión"**
 
 **Mensajes posibles:**
 - ✅ Acceso exitoso → Redirige al panel principal
@@ -119,8 +90,10 @@ La pantalla principal muestra:
 *(Funcionalidad pendiente de implementación)*
 
 ### 3.4 Cerrar Sesión
-1. Haga clic en su nombre de usuario (esquina superior derecha)
+1. Haga clic en su nombre de usuario (esquina inferior izquierda)
 2. Seleccione **"Cerrar Sesión"**
+<img width="1366" height="768" alt="salir" src="https://github.com/user-attachments/assets/902d7fa2-4fc2-4b61-8ad3-e9b7bc95712f" />
+
 3. Será redirigido a la pantalla de inicio
 
 ---
@@ -131,39 +104,16 @@ La pantalla principal muestra:
 
 Al iniciar sesión como votante, verá:
 
-```
-┌────────────────────────────────────────────────┐
-│  👤 Bienvenido, usuario@correo.com             │
-├────────────────────────────────────────────────┤
-│                                                │
-│  📋 MIS ELECCIONES                             │
-│  ┌──────────────────────────────────────────┐ │
-│  │ 🗳️ Elección de Presidente 2025           │ │
-│  │ Estado: ⏳ En curso                       │ │
-│  │ Finaliza: 01/12/2025 18:00               │ │
-│  │                                          │ │
-│  │ [  Votar  ] [ Ver Detalles ]             │ │
-│  └──────────────────────────────────────────┘ │
-│                                                │
-│  ┌──────────────────────────────────────────┐ │
-│  │ 🗳️ Votación Consejo Estudiantil         │ │
-│  │ Estado: ✅ Votado                        │ │
-│  │ Finaliza: 15/11/2025 17:00               │ │
-│  │                                          │ │
-│  │ [ Ver Resultados ]                       │ │
-│  └──────────────────────────────────────────┘ │
-│                                                │
-│  💡 ¿Quiere crear sus propias elecciones?     │
-│     [  Convertirme en Administrador  ]        │
-└────────────────────────────────────────────────┘
-```
+<img width="1366" height="768" alt="Home" src="https://github.com/user-attachments/assets/9f6a4cec-4fb3-4ab7-ade0-fa79873b9e1d" />
 
 ### 4.2 Convertirse en Administrador de Elecciones
 
 Si desea crear y gestionar sus propias elecciones:
 
 **Paso 1:** En el panel principal, haga clic en:
-> **"Convertirme en Administrador"**
+> **"Ser Creador"**
+
+<img width="1366" height="768" alt="ser creador" src="https://github.com/user-attachments/assets/c1eb6e55-5891-4dbf-b80b-3c77e1e58c28" />
 
 **Paso 2:** El sistema actualizará su cuenta automáticamente
 
@@ -174,11 +124,7 @@ Si desea crear y gestionar sus propias elecciones:
 
 ### 4.3 Ver Mis Elecciones
 
-En **"Mis Elecciones"** puede:
-- Ver todas las elecciones en las que puede participar
-- Conocer el estado de cada elección
-- Acceder a votaciones activas
-- Ver resultados de elecciones finalizadas
+*(Funcionalidad pendiente de implementación)*
 
 ---
 
@@ -186,37 +132,11 @@ En **"Mis Elecciones"** puede:
 
 ### 5.1 Panel del Administrador
 
-```
-┌────────────────────────────────────────────────┐
-│  👤 usuario@correo.com (Administrador)          │
-├────────────────────────────────────────────────┤
-│  [➕ Nueva Elección] [📊 Mis Elecciones]        │
-│                                                │
-│  📊 MIS ELECCIONES CREADAS                     │
-│  ┌──────────────────────────────────────────┐ │
-│  │ 🗳️ Elección de Presidente 2025           │ │
-│  │ Estado: ⏳ Activa                         │ │
-│  │ Votantes: 45/100                         │ │
-│  │                                          │ │
-│  │ [ Editar ] [ Ver ] [ Resultados ]        │ │
-│  └──────────────────────────────────────────┘ │
-│                                                │
-│  ┌──────────────────────────────────────────┐ │
-│  │ 🗳️ Votación Delegado de Curso           │ │
-│  │ Estado: 📝 Creada                        │ │
-│  │ Votantes: 0/30                           │ │
-│  │                                          │ │
-│  │ [ Editar ] [ Agregar Votantes ]          │ │
-│  └──────────────────────────────────────────┘ │
-└────────────────────────────────────────────────┘
-```
+*(Funcionalidad pendiente de implementación)*
 
 ### 5.2 Funciones Disponibles
-- ✅ Crear nuevas elecciones
-- ✅ Configurar fechas y horarios
-- ✅ Agregar votantes autorizados
-- ✅ Monitorear el progreso de votación
-- ✅ Ver resultados
+
+*(Funcionalidad pendiente de implementación)*
 
 ---
 
@@ -228,29 +148,7 @@ En **"Mis Elecciones"** puede:
 
 **Paso 2:** Complete el formulario:
 
-```
-┌─────────────────────────────────────────────┐
-│  CREAR NUEVA ELECCIÓN                       │
-├─────────────────────────────────────────────┤
-│  Título de la elección: *                   │
-│  [_________________________________]        │
-│                                             │
-│  Descripción:                               │
-│  [_________________________________]        │
-│  [_________________________________]        │
-│  [_________________________________]        │
-│                                             │
-│  Fecha de inicio: *                         │
-│  [__/__/____] [__:__]                       │
-│                                             │
-│  Fecha de finalización: *                   │
-│  [__/__/____] [__:__]                       │
-│                                             │
-│  * Campos obligatorios                      │
-│                                             │
-│  [  Cancelar  ]  [  Crear Elección  ]       │
-└─────────────────────────────────────────────┘
-```
+<img width="1005" height="768" alt="Crear una Nueva Elección" src="https://github.com/user-attachments/assets/f0c1cd49-2c11-4c8c-9999-2963f0ab161d" />
 
 **Campos:**
 - **Título**: Nombre descriptivo de la elección
@@ -264,36 +162,7 @@ En **"Mis Elecciones"** puede:
 
 ### 6.2 Agregar Votantes a una Elección
 
-**Importante:** Solo puede agregar votantes ANTES de que inicie la elección.
-
-**Paso 1:** En la lista de elecciones, seleccione la elección
-
-**Paso 2:** Haga clic en **"Agregar Votantes"**
-
-**Paso 3:** Ingrese los correos electrónicos:
-
-```
-┌─────────────────────────────────────────────┐
-│  AGREGAR VOTANTES                           │
-├─────────────────────────────────────────────┤
-│  Elección: Votación de Presidente 2025      │
-│                                             │
-│  Ingrese los correos de los votantes:       │
-│  (uno por línea)                            │
-│                                             │
-│  [_________________________________]        │
-│  │ votante1@correo.com                     │
-│  │ votante2@correo.com                     │
-│  │ votante3@correo.com                     │
-│  │                                         │
-│  [_________________________________]        │
-│                                             │
-│  O cargar archivo CSV:                      │
-│  [ Seleccionar archivo ]                    │
-│                                             │
-│  [  Cancelar  ]  [  Agregar Votantes  ]     │
-└─────────────────────────────────────────────┘
-```
+*(Funcionalidad pendiente de frontend)*
 
 **Paso 4:** Haga clic en **"Agregar Votantes"**
 
@@ -327,39 +196,11 @@ En **"Mis Elecciones"** puede:
 
 ### 6.5 Monitorear una Elección Activa
 
-Durante la votación, puede ver:
-
-```
-┌────────────────────────────────────────────┐
-│  MONITOREO: Elección Presidente 2025       │
-├────────────────────────────────────────────┤
-│  Estado: ⏳ ACTIVA                          │
-│  Tiempo restante: 4h 32m                   │
-│                                            │
-│  📊 ESTADÍSTICAS                           │
-│  ├─ Votantes registrados: 100              │
-│  ├─ Han votado: 67                         │
-│  ├─ Pendientes: 33                         │
-│  └─ Participación: 67%                     │
-│                                            │
-│  📈 Progreso:                              │
-│  ████████████████░░░░ 67%                  │
-│                                            │
-│  🕐 Última actualización: Hace 2 minutos   │
-│                                            │
-│  [ Actualizar ] [ Enviar Recordatorio ]    │
-└────────────────────────────────────────────┘
-```
+*(Funcionalidad pendiente de implementación)*
 
 ### 6.6 Ver Resultados
 
-Una vez finalizada la elección:
-
-**Paso 1:** Seleccione la elección finalizada
-
-**Paso 2:** Haga clic en **"Ver Resultados"**
-
-**Paso 3:** Visualice los resultados completos
+*(Funcionalidad pendiente de implementación)*
 
 ---
 
@@ -367,115 +208,19 @@ Una vez finalizada la elección:
 
 ### 7.1 Acceder a una Votación
 
-**Paso 1:** En su panel, vea las elecciones disponibles
-
-**Paso 2:** Identifique elecciones con estado **"⏳ En curso"**
-
-**Paso 3:** Haga clic en **"Votar"**
+*(Funcionalidad pendiente de implementación)*
 
 ### 7.2 Proceso de Votación
 
-```
-┌────────────────────────────────────────────┐
-│  🗳️ VOTACIÓN                                │
-│  Elección de Presidente 2025               │
-├────────────────────────────────────────────┤
-│  Seleccione su opción:                     │
-│                                            │
-│  ○ Candidato A - Partido X                 │
-│  ○ Candidato B - Partido Y                 │
-│  ○ Candidato C - Independiente             │
-│  ○ Voto en blanco                          │
-│                                            │
-│  ⚠️ IMPORTANTE:                            │
-│  • Su voto es secreto y anónimo            │
-│  • No podrá cambiar su voto después        │
-│  • Verifique su selección antes de enviar │
-│                                            │
-│  [  Cancelar  ]  [  Confirmar Voto  ]      │
-└────────────────────────────────────────────┘
-```
-
-**Paso 4:** Seleccione su opción
-
-**Paso 5:** Haga clic en **"Confirmar Voto"**
-
-**Paso 6:** Confirme su decisión:
-
-```
-┌────────────────────────────────────────────┐
-│  ⚠️ CONFIRMACIÓN DE VOTO                    │
-├────────────────────────────────────────────┤
-│  Ha seleccionado:                          │
-│  ➤ Candidato B - Partido Y                 │
-│                                            │
-│  ¿Está seguro de confirmar su voto?        │
-│                                            │
-│  Esta acción NO se puede deshacer.         │
-│                                            │
-│  [  Volver  ]  [  Sí, Confirmar  ]         │
-└────────────────────────────────────────────┘
-```
-
-**Paso 7:** Recibirá la confirmación:
-
-```
-┌────────────────────────────────────────────┐
-│  ✅ VOTO REGISTRADO                         │
-├────────────────────────────────────────────┤
-│  Su voto ha sido registrado exitosamente   │
-│                                            │
-│  Número de comprobante:                    │
-│  #VO-2025-001234                           │
-│                                            │
-│  Gracias por participar en esta elección   │
-│                                            │
-│  [  Volver al Panel  ]                     │
-└────────────────────────────────────────────┘
-```
+*(Funcionalidad pendiente de implementación)*
 
 ### 7.3 Verificar que Voté
 
-En su panel verá:
-- ✅ Estado: **"Votado"**
-- 📅 Fecha y hora del voto registrado
-- 🔒 Su voto es confidencial
+*(Funcionalidad pendiente de implementación)*
 
 ### 7.4 Ver Resultados (después de finalizar)
 
-**Paso 1:** Espere a que finalice la elección
-
-**Paso 2:** En su panel, haga clic en **"Ver Resultados"**
-
-**Paso 3:** Visualice los resultados:
-
-```
-┌────────────────────────────────────────────┐
-│  📊 RESULTADOS FINALES                      │
-│  Elección de Presidente 2025               │
-├────────────────────────────────────────────┤
-│  Total de votantes: 100                    │
-│  Votos emitidos: 95                        │
-│  Participación: 95%                        │
-│                                            │
-│  RESULTADOS:                               │
-│                                            │
-│  1️⃣ Candidato B - Partido Y                │
-│     ████████████████░░░░ 48 votos (50.5%)  │
-│                                            │
-│  2️⃣ Candidato A - Partido X                │
-│     ████████████░░░░░░░░ 35 votos (36.8%)  │
-│                                            │
-│  3️⃣ Candidato C - Independiente            │
-│     ████░░░░░░░░░░░░░░░░ 10 votos (10.5%)  │
-│                                            │
-│  4️⃣ Voto en blanco                         │
-│     █░░░░░░░░░░░░░░░░░░░ 2 votos (2.1%)    │
-│                                            │
-│  [ Descargar PDF ] [ Compartir ]           │
-└────────────────────────────────────────────┘
-```
-
+*(Funcionalidad pendiente de implementación)*
 ---
 
 ## 8. Preguntas Frecuentes
@@ -581,70 +326,6 @@ R: Sí, el sistema es compatible con navegadores móviles.
 2. ✅ Limpie el caché del navegador
 3. ✅ Intente desde otro navegador
 4. ✅ Verifique su conexión a Internet
-
----
-
-## 10. Soporte y Contacto
-
-### 10.1 Canales de Soporte
-
-**Correo Electrónico:**
-soporte@votum.com
-
-**Teléfono:**
-(+57) 123-456-7890
-
-**Horario de Atención:**
-Lunes a Viernes: 8:00 AM - 6:00 PM
-Sábados: 9:00 AM - 1:00 PM
-
-### 10.2 Información a Proporcionar al Contactar Soporte
-
-Para una atención más rápida, proporcione:
-- 📧 Su correo electrónico registrado
-- 📝 Descripción detallada del problema
-- 🖥️ Navegador y sistema operativo que usa
-- 📸 Captura de pantalla del error (si aplica)
-- 🕐 Hora y fecha en que ocurrió el problema
-
-### 10.3 Recursos Adicionales
-
-**Tutoriales en Video:**
-[URL de videos tutoriales]
-
-**Guía Rápida (PDF):**
-[URL de guía rápida descargable]
-
-**Centro de Ayuda:**
-[URL del centro de ayuda]
-
----
-
-## 11. Términos y Condiciones
-
-Al usar el sistema Votum, usted acepta:
-- Proporcionar información veraz y actualizada
-- Mantener la confidencialidad de su contraseña
-- Usar el sistema de manera responsable y ética
-- No intentar vulnerar la seguridad del sistema
-- Respetar la privacidad de otros usuarios
-
----
-
-## 12. Política de Privacidad
-
-### Datos que Recopilamos:
-- Correo electrónico
-- Registros de participación en elecciones (NO el contenido del voto)
-- Fecha y hora de acceso
-
-### Uso de los Datos:
-- Gestión de la cuenta de usuario
-- Administración de procesos electorales
-- Mejora del servicio
-
-### Seguridad:
-Sus datos están protegidos mediante encriptación y medidas de seguridad estándar de la industria.
 
 ---
 
