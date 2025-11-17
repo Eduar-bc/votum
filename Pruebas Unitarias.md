@@ -24,7 +24,7 @@
 | **Tiempo de Ejecución** | 1.04 segundos | ✅ |
 
 **Conclusión Preliminar:** Todas las pruebas unitarias implementadas han sido ejecutadas exitosamente, validando el correcto funcionamiento de los componentes críticos del sistema.
-<img width="1366" height="768" alt="INFORME DE PRUEBAS UNITARIAS" src="https://github.com/user-attachments/assets/f422792a-ba23-42ad-9284-e1e2dfd0546e" />
+<img width="1366" height="739" alt="PRUEBAS UNITARIAS" src="https://github.com/user-attachments/assets/238fe48f-b628-47a6-99ad-14dfef5a8b05" />
 
 ---
 
