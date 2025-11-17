@@ -10,7 +10,6 @@
 7. [Participación en Votaciones](#7-participación-en-votaciones)
 8. [Preguntas Frecuentes](#8-preguntas-frecuentes)
 9. [Solución de Problemas](#9-solución-de-problemas)
-10. [Soporte y Contacto](#10-soporte-y-contacto)
 
 ---
 
@@ -77,7 +76,8 @@ La pantalla principal muestra:
 
 **Paso 2:** Ingrese sus credenciales:
 
-<img width="1215" height="714" alt="Iniciar Sesión" src="https://github.com/user-attachments/assets/4437f3e6-9144-4161-852a-28f88dedea38" />
+<img width="1216" height="710" alt="Iniciar Sesión" src="https://github.com/user-attachments/assets/56130bb8-ed97-4d64-8b26-ecc773bc7c73" />
+
 
 **Paso 3:** Haga clic en **"Iniciar Sesión"**
 
